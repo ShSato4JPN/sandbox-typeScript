@@ -1,0 +1,11 @@
+明確な理由がなければ型推論に頼るべし！！
+手当たり次第に型を設定するとエラーの元になる。
+（とりあえず any 型を設定したりするのはNG）
+
+■　例
+function toNumber(value: string): any {
+  return value
+}
+
+const fiction: number = toNumber('1,000')
+fiction.toFixed()
